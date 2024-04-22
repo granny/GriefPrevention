@@ -1,10 +1,6 @@
-name: CI
-
+name: Block PRs to Workflow
 on:
-  pull_request:
-    branches:
-      - main
-
+  pull_request
 jobs:
   block-workflow-changed-files:
     runs-on: ubuntu-latest
