@@ -15,7 +15,7 @@ jobs:
           files: |
              .github/workflows/**
       - name: Run step if workflow file(s) change
-        if: steps.changed-files.outputs.doc_any_changed == 'true'
+        if: steps.changed-files.outputs.any_changed == 'true'
         uses: actions/github-script@v7
         with:
           script: core.setFailed('PR modifies a workflow file.')
